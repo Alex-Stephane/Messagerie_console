@@ -1,14 +1,19 @@
 #ifndef MESSAGERIE_H_INCLUDED
 #define MESSAGERIE_H_INCLUDED
-/*
+
 typedef struct
 {
-    char nom[],prenom[],pseudo[];
-}utilisateur;
+    int jour,mois,annee;
+}date;
 
-utilisateur *u;
+typedef struct
+{
+    int id;
+    char *nom;
+    char *prenom;
+    date date_naissance;
+    char *username;
 
-void enregistrerutilisateur(utilisateur *u);
-void connecterutilisateur();
-*/
+}user;
+user *new_user;
 #endif // MESSAGERIE_H_INCLUDED

@@ -5,5 +5,4 @@ void menu_accueil();
 void menu_connecter();
 void menu_enregistrer();
 
-
 #endif // MENU_H_INCLUDED

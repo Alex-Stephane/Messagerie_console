@@ -5,9 +5,6 @@
 
 int main()
 {
-
-       menu_accueil();
-
-
+    menu_accueil();
     return 0;
 }

@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1706526427 source:c:\users\alexs\desktop\messagerie_console\main.c
+	<stdio.h>
+	<stdlib.h>
+	"menu.h"
+	"messagerie.h"
+
+1706527736 source:c:\users\alexs\desktop\messagerie_console\messagerie.c
+	<stdio.h>
+	<string.h>
+	"messagerie.h"
+
+1706528922 c:\users\alexs\desktop\messagerie_console\messagerie.h
+
+1706527748 c:\users\alexs\desktop\messagerie_console\menu.h
+
+1706528982 source:c:\users\alexs\desktop\messagerie_console\menu.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"messagerie.h"
+	"menu.h"
+	"auth.h"
+
+1706526427 c:\users\alexs\desktop\messagerie_console\auth.h
+
