@@ -38,7 +38,7 @@ void menu_accueil()
 
 void menu_enregistrer()
 {
-    int choix;
+    int choix1;
     printf("    -------------------------------------------------------------------------------------------------------\n  ");
     printf("    -                                                                                                     -\n  ");
     printf("    -                                                                                                     -\n  ");
@@ -47,25 +47,26 @@ void menu_enregistrer()
     printf("    -                                                                                                     -\n  ");
     printf("    -------------------------------------------------------------------------------------------------------\n\n  ");
 
-    /*user *new_user;
+    user *new_user;
     printf("Entrer votre nom\n");
-    gets(new_user->nom);
+    scanf("%[^\n]s",new_user->nom);
+    //gets(new_user->nom);
     printf("Entrer votre prenom\n");
     gets(new_user->prenom);
     printf("Entrer votre prenom\n");
     gets(new_user->prenom);
-    */
+
     printf("1 pour revenir a l'accueil et 2 pour se connecter\n");
-    scanf("%d",&choix);
-    if(choix == 1)
+    scanf("%d",&choix1);
+    if(choix1 == 1)
         menu_accueil();
-    else
-        menu_connecter();
+    else if(choix1 == 2){
+        menu_connecter();}
+    system("cls");
 }
 
 void menu_connecter()
 {
-    int choix;
     printf("    -----------------   Bienvenue sur la page de connexion de la messagere console      -------------------\n \n ");
     printf("            Entrer votre identifiant\n");
     //gets();
