@@ -2,8 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "messagerie.h"
-#include "menu.h"
-#include "auth.h"
+
+const char *File_User = "Users.csv";
 
 void menu_accueil()
 {
@@ -36,7 +36,7 @@ void menu_accueil()
     } while (choix != 0);
 }
 
-void menu_enregistrer()
+void menu_enregistrer(User us)
 {
     int choix1;
     printf("    -------------------------------------------------------------------------------------------------------\n  ");
@@ -47,31 +47,45 @@ void menu_enregistrer()
     printf("    -                                                                                                     -\n  ");
     printf("    -------------------------------------------------------------------------------------------------------\n\n  ");
 
-    user *new_user;
     printf("Entrer votre nom\n");
-    scanf("%[^\n]s",new_user->nom);
-    //gets(new_user->nom);
+    fgets(us.nom,Max_L,stdin);
     printf("Entrer votre prenom\n");
-    gets(new_user->prenom);
-    printf("Entrer votre prenom\n");
-    gets(new_user->prenom);
-
+    fgets(us.prenom,Max_L,stdin);
+    printf("Entrer votre date de naissance\n");
+    scanf("%d %d %d",&us.date_nais.jour,&us.date_nais.mois,&us.date_nais.annee);
+    printf("Nom : %s\n Prenom: %s\n Date de naissance : %d/%d/%d\n",us.nom,us.prenom,us.date_nais.jour,us.date_nais.mois,us.date_nais.annee);
+    
+    FILE *f = fopen(File_User,"a+");
+    if( f == NULL)
+    {
+        printf("erreur lors de l'ouverture du fichier\n");
+        return;
+    }
+    else
+    {
+        fprintf(File_User,"%s,%s,%d|%d|%d\n",j.nom,j.prenom,j.dateNais.jour,j.dateNais.mois,j.dateNais.annee);
+        printf("\n");
+        printf("enregistrement d'un nouvel utilisateur !\n");
+        printf("\n");
+        fclose(File_User);
+    }
+    
     printf("1 pour revenir a l'accueil et 2 pour se connecter\n");
     scanf("%d",&choix1);
     if(choix1 == 1)
         menu_accueil();
     else if(choix1 == 2){
         menu_connecter();}
+
     system("cls");
 }
 
-void menu_connecter()
+void menu_connecter(User us)
 {
     printf("    -----------------   Bienvenue sur la page de connexion de la messagere console      -------------------\n \n ");
     printf("            Entrer votre identifiant\n");
-    //gets();
+    fgets(us.nom,Max_L,stdin);   
     printf("            Entrer votre mot de passe\n");
-    //gets();
-
+    fgets(us.prenom,Max_L,stdin);
 
 }
