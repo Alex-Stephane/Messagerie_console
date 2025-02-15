@@ -1,24 +1,27 @@
 #ifndef MESSAGERIE_H_INCLUDED
 #define MESSAGERIE_H_INCLUDED
+#include "menu.h"
+
 #define Max_L 50
 
 typedef struct
 {
     int jour,mois,annee;
-}date;
+}Date;
 
 typedef struct
 {
     int id;
     char nom[Max_L];
     char prenom[Max_L];
-    date date_nais;
+    Date date_nais;
     char username[Max_L];
-
+    char mdp[Max_L];
 }User;
 
-void menu_accueil();
-void menu_connecter();
-void menu_enregistrer();
+void generate_username(char username[], const char *prefix);
+void menu_accueil(User us);
+void menu_connecter(User us);
+void menu_enregistrer(User us);
 
 #endif // MESSAGERIE_H_INCLUDED
