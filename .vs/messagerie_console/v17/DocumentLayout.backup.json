@@ -51,7 +51,8 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-02-23T04:37:08.996Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -63,7 +64,8 @@
               "RelativeToolTip": "messagerie.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-02-23T04:37:14.513Z"
+              "WhenOpened": "2024-02-23T04:37:14.513Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -75,7 +77,8 @@
               "RelativeToolTip": "messagerie.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-23T04:37:11.858Z"
+              "WhenOpened": "2024-02-23T04:37:11.858Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -85,7 +88,7 @@
               "RelativeDocumentMoniker": "menu.c",
               "ToolTip": "C:\\Users\\alexs\\OneDrive\\Documents\\GitHub\\messagerie_console\\menu.c",
               "RelativeToolTip": "menu.c",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAABMAAAAWAAAAAAAAAA==",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABMAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2024-02-23T04:35:10.178Z",
               "EditorCaption": ""
@@ -112,7 +115,8 @@
               "RelativeToolTip": "main.c",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2024-02-23T04:35:06.162Z"
+              "WhenOpened": "2024-02-23T04:35:06.162Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
