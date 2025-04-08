@@ -1,0 +1,5 @@
+*.csv
+*.vsidx
+/.vs
+*.exe
+*.code-workspace
