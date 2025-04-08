@@ -1,5 +1,4 @@
+messagerie_console.code-workspace
+.vs
 *.csv
-*.vsidx
-/.vs
 *.exe
-*.code-workspace
