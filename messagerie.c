@@ -6,6 +6,7 @@
 #include "menu.h"
 
 const char *File_User = "Users.csv";
+const char *File_admin = "Admin.csv";
 
 void generate_username(char username[], const char *prefix) 
 {
@@ -58,9 +59,45 @@ void register_user(User us)
     }
 }
 
-void auth_user(User us)
+int auth_user(User us)
 {
     FILE *f = fopen(File_User, "r");
+    if (f == NULL)
+    {
+        printf("Erreur lors de l'ouverture du fichier\n");
+        return;
+    }
+
+    char line[256];
+    int found = 0;
+    while (fgets(line, sizeof(line), f))
+    {
+        char file_username[Max_L], file_mdp[Max_L];
+        sscanf(line, "%[^;];%[^;]", file_username, file_mdp);
+
+        if (strcmp(us.username, file_username) == 0 && strcmp(us.mdp, file_mdp) == 0)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if (found)
+    {
+        printf("Connexion reussie\n");
+        return 1;
+        
+    }
+    else
+    {
+        printf("Connexion echouee\n");
+        return 0;
+    }
+}
+
+int auth_admin(User us)
+{
+    FILE *f = fopen(File_admin, "r");
     if (f == NULL)
     {
         printf("Erreur lors de l'ouverture du fichier\n");
@@ -91,7 +128,6 @@ void auth_user(User us)
         printf("Connexion echouee\n");
     }
 }
-
 void forgot_password(User us)
 {
     FILE *f = fopen(File_User, "r+");
@@ -128,4 +164,22 @@ void forgot_password(User us)
     fclose(f);
 }
 
+void print_list()
+{
+    char ligne[2024];
 
+    FILE* j = fopen(File_User,"r");
+    if(j != NULL)
+    {
+        printf("LISTE DES UTILISATEURS\n");
+        while(fgets(ligne,sizeof(ligne),j) != NULL){
+            int id;
+            sscanf(ligne,"%d",&id);
+            printf("id = %d\n",id);
+        }
+    }
+    else
+        printf("Impossible d'ouvrir le fichier utilisateur \n");
+
+    fclose(j);
+}

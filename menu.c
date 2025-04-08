@@ -86,6 +86,27 @@ void menu_connecter(User us)
 
 }
 
+void menu_admin(User us)
+{
+    int choix;
+    printf("1: Consulter la liste des utiliateurs\n");
+    printf("2: Supprimer un utilisateur\n");
+    printf("3: Modifier les membres\n");
+    printf("0: Quitter\n");
+    printf("Votre choix : ");
+    scanf("%d",&choix);
+
+    switch (choix)
+    {
+    case 1:
+        /* code */
+        break;
+    
+    default:
+        break;
+    }
+}
+
 void menu_forgotpwd(User us)
 {
     int choix1;
