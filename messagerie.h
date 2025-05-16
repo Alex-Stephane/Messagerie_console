@@ -26,7 +26,5 @@ void menu_forgotpwd(User us);
 void menu_accueil(User us);
 void menu_connecter(User us);
 void menu_enregistrer(User us);
-void menu_admin(User us);
-void print_list();
 
 #endif // MESSAGERIE_H_INCLUDED

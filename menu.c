@@ -4,6 +4,9 @@
 #include "messagerie.h"
 #include <time.h>
 
+#define PORT 8080
+#define BUFFER_SIZE 1024
+
 void menu_accueil(User us)
 {
     int choix;
@@ -64,29 +67,44 @@ void menu_enregistrer(User us)
 
 }
 
-void menu_connecter(User us)
-{
+void menu_connecter(User us) {
     system("cls");
     int choix1;
-    printf("    -----------------   Bienvenue sur la page de connexion de la messagere console      -------------------\n \n ");
+    printf("    -----------------   Bienvenue sur la page de connexion de la messagerie console      -------------------\n \n ");
     
     printf("\nUsername : ");
     fflush(stdin);
-    fgets(us.username,Max_L,stdin);
+    fgets(us.username, Max_L, stdin);
     us.username[strcspn(us.username, "\n")] = 0;
 
     printf("Mot de passe : ");
-    fgets(us.mdp,Max_L,stdin);
+    fgets(us.mdp, Max_L, stdin);
     us.mdp[strcspn(us.mdp, "\n")] = 0;
 
     auth_user(us);
-    printf("Appuyer une touche pour continuer\n");
-    scanf("%d",&choix1);
-    
+    /*if (auth_user(us) == 1) {
+        printf("Connexion réussie !\n");
+        printf("1 : Démarrer un serveur\n");
+        printf("2 : Se connecter à un serveur\n");
+        printf("Votre choix : ");
+        scanf("%d", &choix1);
+        getchar();
 
+        if (choix1 == 1) {
+            start_server();
+        } else if (choix1 == 2) {
+            char server_ip[BUFFER_SIZE];
+            printf("Entrez l'adresse IP du serveur : ");
+            fgets(server_ip, BUFFER_SIZE, stdin);
+            server_ip[strcspn(server_ip, "\n")] = 0;
+            start_client(server_ip);
+        }
+    } else {
+        printf("Connexion échouée.\n");
+    }*/
 }
 
-void menu_admin(User us)
+/*void menu_admin(User us)
 {
     int choix;
     printf("1: Consulter la liste des utiliateurs\n");
@@ -99,13 +117,13 @@ void menu_admin(User us)
     switch (choix)
     {
     case 1:
-        /* code */
+        
         break;
     
     default:
         break;
     }
-}
+}*/
 
 void menu_forgotpwd(User us)
 {

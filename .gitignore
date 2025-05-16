@@ -2,3 +2,5 @@ messagerie_console.code-workspace
 .vs
 *.csv
 *.exe
+*.obj
+*.s
