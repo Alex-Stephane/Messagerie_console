@@ -4,3 +4,4 @@ messagerie_console.code-workspace
 *.exe
 *.obj
 *.s
+*.o
